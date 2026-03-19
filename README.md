@@ -6,7 +6,6 @@
 <title>個人履歷</title>
 
 <style>
-
 body{
     font-family: Arial, sans-serif;
     background:#f5f5f5;
