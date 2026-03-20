@@ -1,63 +1,124 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>個人履歷 - 亞洲大學學生</title>
+<title>個人履歷</title>
+
 <style>
-  /* Reset */
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Noto Sans TC', sans-serif; background: #f0f2f5; color: #333; line-height: 1.6; padding: 20px; }
-  .container { max-width: 800px; margin: auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);}
-  h1 { font-size: 2em; color: #2c3e50; margin-bottom: 10px; }
-  h2 { color: #34495e; margin-top: 20px; margin-bottom: 10px; border-bottom: 2px solid #e67e22; display: inline-block; padding-bottom: 3px;}
-  p { margin-bottom: 10px; }
-  ul { margin-bottom: 10px; padding-left: 20px; }
-  li { margin-bottom: 5px; }
-  .skills span { display: inline-block; background: #e67e22; color: #fff; padding: 5px 10px; border-radius: 5px; margin-right: 5px; margin-bottom: 5px;}
-  button { padding: 10px 15px; border: none; border-radius: 5px; background: #3498db; color: #fff; cursor: pointer; margin-top: 10px;}
-  button:hover { background: #2980b9; }
-  #message { margin-top: 15px; font-weight: bold; color: green; }
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:80%;
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    color:#333;
+}
+
+h2{
+    border-bottom:2px solid #eee;
+    padding-bottom:5px;
+}
+
+.section{
+    margin-bottom:25px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    background:#4CAF50;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#45a049;
+}
+
+.hidden{
+    display:none;
+}
+
 </style>
 </head>
+
 <body>
+
 <div class="container">
-  <h1>陳沛慈</h1>
-  <img src="images/myphoto.jpg" alt="個人照片" width="150">
-  <p>亞洲大學 • 第一學年 • 應屆生</p>
-  <p>學號: 114055028</p>
-  <p>Email: ann20975099770@gmail.com | 電話: 0910-221-772</p>
 
-  <h2>自我介紹</h2>
-  <p>喜歡小動物，有耐心，喜歡做模型，對室內設計與空間創作有興趣，希望透過實習累積實務經驗。</p>
+<h1>陳沛慈</h1>
+<p>第一學年 • 亞洲大學 • 應屆生</p>
+<img src="images/myphoto.jpg" alt="個人照片" width="150">
+<p>學號:114055028</p>
 
-  <h2>學歷</h2>
-  <ul>
-    <li>亞洲大學，室內設計系 (2025 - 現在)</li>
-  </ul>
+<div class="section">
+<h2>個人簡介</h2>
+<p>
+喜歡小動物，有耐心，喜歡做模型，
+對室內設計與空間創作有興趣，
+希望透過實習累積實務經驗。
+</p>
+</div>
 
-  <h2>技能</h2>
-  <div class="skills">
-    <span>模型製作</span>
-    <span>繪畫設計圖</span>
-    <span>空間設計概念</span>
-  </div>
+<div class="section">
+<h2>學歷</h2>
+<p><b>亞洲大學</b></p>
+<p>第一學年（在學）</p>
+<p>主修：室內設計系</p>
+</div>
 
-  <h2>經歷</h2>
-  <ul>
-    <li>目前無正式工作經驗，可於實習或見習期間快速學習並配合輪班與團隊合作</li>
-  </ul>
+<div class="section">
+<h2>技能</h2>
+<ul>
+<li>模型製作</li>
+<li>繪畫設計圖</li>
+<li>空間設計概念</li>
+</ul>
+</div>
 
-  <h2>互動小功能</h2>
-  <button onclick="showMessage()">點我顯示訊息</button>
-  <p id="message"></p>
+<div class="section">
+<h2>經歷</h2>
+<p>
+目前無正式工作經驗，
+可於實習或見習期間快速學習，
+並配合輪班與團隊合作。
+</p>
+</div>
+
+<div class="section">
+<h2>聯絡方式</h2>
+<p>Email：ann20975099770@gmail.com</p>
+<p>電話：0910-221-772</p>
+</div>
+
+<button onclick="showMessage()">聯絡我</button>
+
+<p id="message" class="hidden">謝謝觀看我的履歷！</p>
+
 </div>
 
 <script>
-  function showMessage() {
-    const msg = document.getElementById('message');
-    msg.textContent = "謝謝觀看我的履歷！";
-  }
+
+function showMessage(){
+    document.getElementById("message").classList.remove("hidden");
+}
+
 </script>
+
 </body>
 </html>
