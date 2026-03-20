@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -6,7 +7,7 @@
 <title>個人履歷</title>
 
 <style>
-    
+
 body{
     font-family: Arial, sans-serif;
     background:#f5f5f5;
@@ -54,12 +55,27 @@ button:hover{
     display:none;
 }
 
+/* 新增照片樣式 */
+.profile{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+    margin:0 auto 20px;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
+
+<!-- 照片 -->
+
+<img src="images/myphoto.jpg" alt="個人照片" class="profile">
 
 <h1>陳沛慈</h1>
 <p>第一學年 • 亞洲大學 • 應屆生</p>
@@ -112,12 +128,11 @@ button:hover{
 </div>
 
 <script>
-
 function showMessage(){
     document.getElementById("message").classList.remove("hidden");
 }
-
 </script>
 
 </body>
 </html>
+
