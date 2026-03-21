@@ -1,138 +1,207 @@
 <!DOCTYPE html>
-
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>個人履歷</title>
+<title>履歷</title>
 
 <style>
-
 body{
-    font-family: Arial, sans-serif;
-    background:#f5f5f5;
-    margin:0;
-    padding:0;
+  margin:0;
+  background:#eaeaea;
+  font-family: Arial, sans-serif;
 }
 
+/* 整體 */
 .container{
-    width:80%;
-    max-width:900px;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  width:900px;
+  margin:40px auto;
+  display:flex;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
-h1{
-    color:#333;
+/* 左側 */
+.left{
+  width:35%;
+  background:#2c2c30;
+  color:white;
+  padding:30px 20px;
+  text-align:center;
 }
 
-h2{
-    border-bottom:2px solid #eee;
-    padding-bottom:5px;
+/* 圓形照片 */
+.left img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #fff;
+  margin-bottom:15px;
 }
 
-.section{
-    margin-bottom:25px;
+.name{
+  font-size:20px;
+  margin:10px 0;
+}
+
+.title{
+  font-size:13px;
+  color:#ccc;
+  margin-bottom:20px;
+}
+
+/* 左側區塊 */
+.left-section{
+  margin-top:25px;
+  text-align:left;
+}
+
+.left-section h3{
+  font-size:13px;
+  border-bottom:1px solid #888;
+  padding-bottom:5px;
+  margin-bottom:10px;
+}
+
+.left-section p{
+  font-size:13px;
+  margin:5px 0;
+}
+
+/* 右側 */
+.right{
+  width:65%;
+  background:white;
+  padding:30px;
+}
+
+/* 標題 */
+.right h2{
+  border-bottom:2px solid #333;
+  padding-bottom:5px;
+  margin-top:20px;
+}
+
+/* 時間軸 */
+.timeline{
+  position:relative;
+  margin-left:20px;
+  padding-left:20px;
+  border-left:2px solid #999;
+}
+
+.timeline-item{
+  margin-bottom:20px;
+  position:relative;
+}
+
+.timeline-item::before{
+  content:"";
+  width:10px;
+  height:10px;
+  background:#3498db;
+  border-radius:50%;
+  position:absolute;
+  left:-26px;
+  top:5px;
+}
+
+.year{
+  font-size:13px;
+  color:#666;
+}
+
+.skills span{
+  display:inline-block;
+  background:#3498db;
+  color:white;
+  padding:5px 10px;
+  margin:5px 5px 0 0;
+  border-radius:5px;
+  font-size:12px;
 }
 
 button{
-    padding:10px 20px;
-    border:none;
-    background:#4CAF50;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-button:hover{
-    background:#45a049;
-}
-
-.hidden{
-    display:none;
-}
-
-/* 新增照片樣式 */
-.profile{
-    width:150px;
-    height:150px;
-    object-fit:cover;
-    border-radius:50%;
-    display:block;
-    margin:0 auto 20px;
+  margin-top:20px;
+  padding:10px;
+  background:#333;
+  color:white;
+  border:none;
+  cursor:pointer;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <div class="container">
 
-<!-- 照片 -->
+  <!-- 左 -->
+  <div class="left">
+    <img src="images/myphoto.jpg">
 
-<img src="images/myphoto.jpg" alt="個人照片" class="profile">
+    <div class="name">陳沛慈</div>
+    <div class="title">Interior Design Student</div>
 
-<h1>陳沛慈</h1>
-<p>第一學年 • 亞洲大學 • 應屆生</p>
-<p>學號:114055028</p>
+    <div class="left-section">
+      <h3>基本資料</h3>
+      <p>亞洲大學</p>
+      <p>室內設計系</p>
+      <p>學號: 114055028</p>
+    </div>
 
-<div class="section">
-<h2>個人簡介</h2>
-<p>
-喜歡小動物，有耐心，喜歡做模型，
-對室內設計與空間創作有興趣，
-希望透過實習累積實務經驗。
-</p>
-</div>
+    <div class="left-section">
+      <h3>聯絡方式</h3>
+      <p>Email:<br>ann20975099770@gmail.com</p>
+      <p>電話:<br>0910-221-772</p>
+    </div>
+  </div>
 
-<div class="section">
-<h2>學歷</h2>
-<p><b>亞洲大學</b></p>
-<p>第一學年（在學）</p>
-<p>主修：室內設計系</p>
-</div>
+  <!-- 右 -->
+  <div class="right">
 
-<div class="section">
-<h2>技能</h2>
-<ul>
-<li>模型製作</li>
-<li>繪畫設計圖</li>
-<li>空間設計概念</li>
-</ul>
-</div>
+    <h2>自我介紹</h2>
+    <p>
+      喜歡小動物，有耐心，喜歡做模型，
+      對室內設計與空間創作有興趣，
+      希望透過實習累積實務經驗。
+    </p>
 
-<div class="section">
-<h2>經歷</h2>
-<p>
-目前無正式工作經驗，
-可於實習或見習期間快速學習，
-並配合輪班與團隊合作。
-</p>
-</div>
+    <h2>學歷</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="year">2025 - 現在</div>
+        亞洲大學 室內設計系
+      </div>
+    </div>
 
-<div class="section">
-<h2>聯絡方式</h2>
-<p>Email：ann20975099770@gmail.com</p>
-<p>電話：0910-221-772</p>
-</div>
+    <h2>技能</h2>
+    <div class="skills">
+      <span>模型製作</span>
+      <span>繪圖設計</span>
+      <span>空間規劃</span>
+    </div>
 
-<button onclick="showMessage()">聯絡我</button>
+    <h2>經歷</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        無正式工作經驗，具備快速學習與團隊合作能力
+      </div>
+    </div>
 
-<p id="message" class="hidden">謝謝觀看我的履歷！</p>
+    <button onclick="showMessage()">點我</button>
+    <p id="msg"></p>
+
+  </div>
 
 </div>
 
 <script>
 function showMessage(){
-    document.getElementById("message").classList.remove("hidden");
+  document.getElementById("msg").innerText="謝謝觀看我的履歷！";
 }
 </script>
 
 </body>
 </html>
-
