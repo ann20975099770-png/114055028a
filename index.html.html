@@ -6,100 +6,128 @@
 <title>履歷</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Noto Sans TC', sans-serif;
-  background: #eee;
+body{
+  margin:0;
+  background:#eaeaea;
+  font-family: Arial, sans-serif;
 }
 
-.container {
-  display: flex;
-  max-width: 900px;
-  margin: 40px auto;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+/* 整體 */
+.container{
+  width:900px;
+  margin:40px auto;
+  display:flex;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* 左側 */
-.left {
-  width: 35%;
-  background: #2f2f33;
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
+.left{
+  width:35%;
+  background:#2c2c30;
+  color:white;
+  padding:30px 20px;
+  text-align:center;
 }
 
-.left img {
-  width: 140px;
-  border-radius: 50%;
-  margin-bottom: 15px;
+/* 圓形照片 */
+.left img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #fff;
+  margin-bottom:15px;
 }
 
-.left h1 {
-  font-size: 20px;
-  margin: 10px 0;
+.name{
+  font-size:20px;
+  margin:10px 0;
 }
 
-.left p {
-  font-size: 14px;
-  margin: 5px 0;
+.title{
+  font-size:13px;
+  color:#ccc;
+  margin-bottom:20px;
 }
 
-.section-title {
-  margin-top: 25px;
-  font-size: 14px;
-  border-bottom: 1px solid #888;
-  padding-bottom: 5px;
+/* 左側區塊 */
+.left-section{
+  margin-top:25px;
+  text-align:left;
 }
 
-.contact {
-  font-size: 13px;
-  margin-top: 10px;
+.left-section h3{
+  font-size:13px;
+  border-bottom:1px solid #888;
+  padding-bottom:5px;
+  margin-bottom:10px;
+}
+
+.left-section p{
+  font-size:13px;
+  margin:5px 0;
 }
 
 /* 右側 */
-.right {
-  width: 65%;
-  background: white;
-  padding: 30px;
+.right{
+  width:65%;
+  background:white;
+  padding:30px;
 }
 
-.right h2 {
-  border-bottom: 2px solid #333;
-  padding-bottom: 5px;
-  margin-top: 20px;
+/* 標題 */
+.right h2{
+  border-bottom:2px solid #333;
+  padding-bottom:5px;
+  margin-top:20px;
 }
 
-.right p {
-  margin: 10px 0;
+/* 時間軸 */
+.timeline{
+  position:relative;
+  margin-left:20px;
+  padding-left:20px;
+  border-left:2px solid #999;
 }
 
-.timeline {
-  border-left: 2px solid #ccc;
-  margin-left: 10px;
-  padding-left: 15px;
+.timeline-item{
+  margin-bottom:20px;
+  position:relative;
 }
 
-.timeline-item {
-  margin-bottom: 15px;
+.timeline-item::before{
+  content:"";
+  width:10px;
+  height:10px;
+  background:#3498db;
+  border-radius:50%;
+  position:absolute;
+  left:-26px;
+  top:5px;
 }
 
-.skills span {
-  display: inline-block;
-  background: #444;
-  color: white;
-  padding: 5px 10px;
-  margin: 5px 5px 0 0;
-  border-radius: 5px;
-  font-size: 13px;
+.year{
+  font-size:13px;
+  color:#666;
 }
 
-button {
-  margin-top: 20px;
-  padding: 10px;
-  background: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
+.skills span{
+  display:inline-block;
+  background:#3498db;
+  color:white;
+  padding:5px 10px;
+  margin:5px 5px 0 0;
+  border-radius:5px;
+  font-size:12px;
+}
+
+button{
+  margin-top:20px;
+  padding:10px;
+  background:#333;
+  color:white;
+  border:none;
+  cursor:pointer;
 }
 
 </style>
@@ -109,23 +137,28 @@ button {
 
 <div class="container">
 
-  <!-- 左側 -->
+  <!-- 左 -->
   <div class="left">
     <img src="images/myphoto.jpg">
 
-    <h1>陳沛慈</h1>
-    <p>亞洲大學</p>
-    <p>室內設計系</p>
-    <p>學號: 114055028</p>
+    <div class="name">陳沛慈</div>
+    <div class="title">Interior Design Student</div>
 
-    <div class="section-title">CONTACT</div>
-    <div class="contact">
+    <div class="left-section">
+      <h3>基本資料</h3>
+      <p>亞洲大學</p>
+      <p>室內設計系</p>
+      <p>學號: 114055028</p>
+    </div>
+
+    <div class="left-section">
+      <h3>聯絡方式</h3>
       <p>Email:<br>ann20975099770@gmail.com</p>
       <p>電話:<br>0910-221-772</p>
     </div>
   </div>
 
-  <!-- 右側 -->
+  <!-- 右 -->
   <div class="right">
 
     <h2>自我介紹</h2>
@@ -138,7 +171,7 @@ button {
     <h2>學歷</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <b>2025 - 現在</b><br>
+        <div class="year">2025 - 現在</div>
         亞洲大學 室內設計系
       </div>
     </div>
@@ -146,14 +179,14 @@ button {
     <h2>技能</h2>
     <div class="skills">
       <span>模型製作</span>
-      <span>繪畫設計圖</span>
-      <span>空間設計概念</span>
+      <span>繪圖設計</span>
+      <span>空間規劃</span>
     </div>
 
     <h2>經歷</h2>
     <div class="timeline">
       <div class="timeline-item">
-        目前無正式工作經驗，可於實習期間快速學習並配合團隊合作
+        無正式工作經驗，具備快速學習與團隊合作能力
       </div>
     </div>
 
