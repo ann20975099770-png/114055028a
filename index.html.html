@@ -1,57 +1,105 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>個人履歷</title>
+<title>履歷</title>
 
 <style>
-
-body{
-    font-family: Arial, sans-serif;
-    background:#f5f5f5;
-    margin:0;
-    padding:0;
+body {
+  margin: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  background: #eee;
 }
 
-.container{
-    width:80%;
-    max-width:900px;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-h1{
-    color:#333;
+/* 左側 */
+.left {
+  width: 35%;
+  background: #2f2f33;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
 }
 
-h2{
-    border-bottom:2px solid #eee;
-    padding-bottom:5px;
+.left img {
+  width: 140px;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
 
-.section{
-    margin-bottom:25px;
+.left h1 {
+  font-size: 20px;
+  margin: 10px 0;
 }
 
-button{
-    padding:10px 20px;
-    border:none;
-    background:#4CAF50;
-    color:white;
-    border-radius:5px;
-    cursor:pointer;
+.left p {
+  font-size: 14px;
+  margin: 5px 0;
 }
 
-button:hover{
-    background:#45a049;
+.section-title {
+  margin-top: 25px;
+  font-size: 14px;
+  border-bottom: 1px solid #888;
+  padding-bottom: 5px;
 }
 
-.hidden{
-    display:none;
+.contact {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* 右側 */
+.right {
+  width: 65%;
+  background: white;
+  padding: 30px;
+}
+
+.right h2 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.right p {
+  margin: 10px 0;
+}
+
+.timeline {
+  border-left: 2px solid #ccc;
+  margin-left: 10px;
+  padding-left: 15px;
+}
+
+.timeline-item {
+  margin-bottom: 15px;
+}
+
+.skills span {
+  display: inline-block;
+  background: #444;
+  color: white;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 </style>
@@ -61,63 +109,65 @@ button:hover{
 
 <div class="container">
 
-<h1>陳沛慈</h1>
-<p>第一學年 • 亞洲大學 • 應屆生</p>
-<img src="images/myphoto.jpg" alt="個人照片" width="150">
-<p>學號:114055028</p>
+  <!-- 左側 -->
+  <div class="left">
+    <img src="images/myphoto.jpg">
 
-<div class="section">
-<h2>個人簡介</h2>
-<p>
-喜歡小動物，有耐心，喜歡做模型，
-對室內設計與空間創作有興趣，
-希望透過實習累積實務經驗。
-</p>
-</div>
+    <h1>陳沛慈</h1>
+    <p>亞洲大學</p>
+    <p>室內設計系</p>
+    <p>學號: 114055028</p>
 
-<div class="section">
-<h2>學歷</h2>
-<p><b>亞洲大學</b></p>
-<p>第一學年（在學）</p>
-<p>主修：室內設計系</p>
-</div>
+    <div class="section-title">CONTACT</div>
+    <div class="contact">
+      <p>Email:<br>ann20975099770@gmail.com</p>
+      <p>電話:<br>0910-221-772</p>
+    </div>
+  </div>
 
-<div class="section">
-<h2>技能</h2>
-<ul>
-<li>模型製作</li>
-<li>繪畫設計圖</li>
-<li>空間設計概念</li>
-</ul>
-</div>
+  <!-- 右側 -->
+  <div class="right">
 
-<div class="section">
-<h2>經歷</h2>
-<p>
-目前無正式工作經驗，
-可於實習或見習期間快速學習，
-並配合輪班與團隊合作。
-</p>
-</div>
+    <h2>自我介紹</h2>
+    <p>
+      喜歡小動物，有耐心，喜歡做模型，
+      對室內設計與空間創作有興趣，
+      希望透過實習累積實務經驗。
+    </p>
 
-<div class="section">
-<h2>聯絡方式</h2>
-<p>Email：ann20975099770@gmail.com</p>
-<p>電話：0910-221-772</p>
-</div>
+    <h2>學歷</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <b>2025 - 現在</b><br>
+        亞洲大學 室內設計系
+      </div>
+    </div>
 
-<button onclick="showMessage()">聯絡我</button>
+    <h2>技能</h2>
+    <div class="skills">
+      <span>模型製作</span>
+      <span>繪畫設計圖</span>
+      <span>空間設計概念</span>
+    </div>
 
-<p id="message" class="hidden">謝謝觀看我的履歷！</p>
+    <h2>經歷</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        目前無正式工作經驗，可於實習期間快速學習並配合團隊合作
+      </div>
+    </div>
+
+    <button onclick="showMessage()">點我</button>
+    <p id="msg"></p>
+
+  </div>
 
 </div>
 
 <script>
-
 function showMessage(){
-    document.getElementById("message").classList.remove("hidden");
+  document.getElementById("msg").innerText="謝謝觀看我的履歷！";
 }
-
 </script>
 
 </body>
